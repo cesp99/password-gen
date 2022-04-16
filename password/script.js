@@ -8,5 +8,8 @@ function generatore() {
         password += e.substring(randomNumber, randomNumber +1);
     }
     document.getElementById("password").value = password;
-
+    var copia = document.getElementById("password");
+    copia.select();
+    copia.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copia.value);
 }
